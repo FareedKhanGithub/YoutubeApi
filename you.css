@@ -1,0 +1,104 @@
+/*---------------------------SCSS-----------------------------*/
+@mixin font-base {     /*you can impart this stuff onto multiple fonts  */
+	padding: 0;
+	margin: 0;
+	line-height: 1.3;
+	font-weight: 600;
+}
+
+
+
+h4 {
+	@include font-base;         /*this part includes the scss code above */
+}
+
+p {
+	@include font-base;           /*this part includes the scss code above */ 
+	color: grey;
+	font-size: 0.7rem;              /*  relative to them   bad logic naming honestly */
+	                                            /* 16 font size is default so this is saying be 70% of that*/
+}
+
+
+
+
+
+
+
+/*-----------------container------------------------------------------*/
+body {
+	background-color: #eee;                /*  another color   */
+}
+
+main {
+	padding: 370px 18px 10px;
+}
+
+
+.container {                   /*pertaining to the white background space in the middle */ 
+	width: 560px;
+	height: 100vh;
+	background-color: #fff;          /*white background */
+	margin: 0 auto;             /*left and right margin so that you have middle */
+}
+
+
+
+
+
+
+
+
+/*----------------------------youtoube logo-----------------------------*/
+.logo{                 /*pertaining to specifically the youtuube logo only that one line */
+	width: 120px; 
+	padding: 10px;          /*10 pixels from all sides */
+}
+
+header{
+	position: fixed;                  /* fixed position here to the top  left side , takes it out of flow so it */ 
+	                                            /*8 will allways stay on top part of page*/
+	text-align: center;        /*will be in the center of the page */
+	background-color: red;         /*this will make the headers background red */
+}
+
+
+
+
+
+
+/*--------------------------------------------------*/
+header,section {               /*both the header and the section now have the same requirement demands */              
+	position: fixed;
+	text-align: center;
+	width: 560px;
+	background-color: #fff;
+}
+
+
+section {
+	top: 50px;     /*we want section to be just 50 pixels away from the top */
+}
+
+
+/*-----Thumbnail----------------------------------------------*/
+.thumb {
+	height: 70px;
+	border-radius: 4px;
+}
+
+article {
+	display: flex;                 /*  */
+	align-items: center;     /*middle of the element  */
+	padding: 8px 12px;           /*8pixel from topbottom  and 12 pixels left and right  */
+	border: 2px solid white;           /* puts invisible border so hover doesnt move the articles  */  
+	border-radius: 8px;                      /*  I honestly dont see the difference??   */
+	margin: 0 auto;
+	&:hover {                         /* & = pertaining to article, shows the red on articles */
+		border: 2px solid #ff9999;
+	}
+}
+
+.details {
+	padding: 8px 22px;        /*this pading is for the descriptions of the 
+}
